@@ -4,14 +4,14 @@ import conf from "../../config/conf";
 export class Service {
   client = new Client();
   databases;
-  buckets;
+  bucket;
 
   constructor() {
     this.client
       .setEndpoint(conf.appwriteUrl)
       .setProject(conf.appwriteProjectId);
-    this.databases = new Databases();
-    this.buckets = new Storage();
+    this.databases = new Databases(this.client);
+    this.bucket = new Storage(this.client);
   }
 
   //   posts authentication
@@ -19,7 +19,7 @@ export class Service {
   // create post
   async createPost({ title, content, slug, featuredImage, status, userId }) {
     try {
-      return await this.databases.creatDocument(
+      return await this.databases.createDocument(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         slug,
@@ -103,7 +103,7 @@ export class Service {
   // upload file
   async uploadFile(file) {
     try {
-      return await this.buckets.createFile(
+      return await this.bucket.createFile(
         conf.appwriteBucketId,
         ID.unique(),
         file
@@ -118,7 +118,7 @@ export class Service {
 
   async deleteFile(fileId) {
     try {
-      return await this.buckets.deleteFile(conf.appwriteBucketId, fileId);
+      return await this.bucket.deleteFile(conf.appwriteBucketId, fileId);
     } catch (error) {
       console.log("Appwrite service :: deleteFile :: error " + error);
       return false;
@@ -127,10 +127,11 @@ export class Service {
 
   // get file preview
   getFilePreview(fileId) {
-    return this.buckets.getFilePreview(conf.appwriteBucketId, fileId);
+    return this.bucket.getFilePreview(conf.appwriteBucketId, fileId);
   }
 }
 
 const service = new Service();
 
 export default service;
+

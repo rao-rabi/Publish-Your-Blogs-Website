@@ -8,7 +8,24 @@ import Input from "./Input.jsx";
 import Select from "./Select.jsx";
 import Signup from "./Signup.jsx";
 import Login from "./Login.jsx";
-import PostForm from './post-form/PostForm.jsx'
-import PostCard from './PostCard.jsx;'
+import PostForm from "./post-form/PostForm.jsx";
+import AuthLayout from "./AuthLayout.jsx";
+import PostCard from "./PostCard.jsx";
+import Button from "./Button.jsx"
 
-export { Header, Footer, LogoutBtn, Container, Logo, Input, Select, RTE, Signup, Login, PostForm, PostCard};
+export {
+  Header,
+  Footer,
+  LogoutBtn,
+  Container,
+  Logo,
+  Input,
+  Select,
+  RTE,
+  Signup,
+  Login,
+  PostForm,
+  PostCard,
+  AuthLayout,
+  Button
+};

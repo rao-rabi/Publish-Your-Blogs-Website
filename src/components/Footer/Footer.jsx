@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from '../index'
+import {Logo} from '../index'
 const Footer = () => {
   return (
     <section className="relative overflow-hidden py-10 bg-gray-400 border border-t-2 border-t-black">
@@ -12,7 +12,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-600">
-                  &copy; Copyright 2023. All Rights Reserved by DevUI.
+                  &copy; Copyright 2023. All Rights Reserved by Rao Rabi.
                 </p>
               </div>
             </div>
