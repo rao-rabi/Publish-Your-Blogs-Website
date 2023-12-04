@@ -2,7 +2,7 @@ import logo from '../assets/Blue Waves Travel Blog Logo.png'
 function Logo() {
   return (
     <div>
-      <img className='w-24 h-24' src={logo} alt="Logo" />
+      <img className='w-16 h-16' src={logo} alt="Logo" />
     </div>
   )
 }

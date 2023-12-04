@@ -26,7 +26,7 @@ function Signup() {
     }
   };
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center p-5">
       <div
         className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
       >

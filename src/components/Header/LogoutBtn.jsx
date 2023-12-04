@@ -15,7 +15,7 @@ function LogoutBtn() {
       });
   };
   return (
-    <button onClick={logoutHandler} className="inline-block py-2 px-6 duration-200 bg-blue-800 hover:bg-blue-100 rounded-full">
+    <button onClick={logoutHandler} className="inline-block py-2 px-6 duration-200 text-lg font-bold hover:bg-indigo-300 rounded-full">
       Logout
     </button>
   );
