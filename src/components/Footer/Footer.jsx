@@ -48,7 +48,7 @@ export default function Footer() {
                     <span className="text-base font-medium px-3 ">Contact us</span>
                     <ReactWhatsapp
                       number="+92304-8825465"
-                      message="Hy! How can i help you?"
+                      message="Is there anyone available?"
                     >
                       <svg
                         fill="#27b931"
